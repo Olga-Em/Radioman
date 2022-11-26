@@ -1,47 +1,70 @@
 package ru.netology.radioman;
 
 public class Radio {
+    private int amountRadioStation = 10;
+    private int firstRadioStation = 0;
+    private int lastRadioStation = amountRadioStation - 1;
+    private int minVolume = 0;
+    private int maxVolume = 100;
 
     public int radioStationNumber;
     public int soundVolume;
 
+    public Radio(int amountRadioStation) {
+        this.amountRadioStation = amountRadioStation;
+    }
+
+    public Radio() {
+        this.amountRadioStation = 10;
+    }
+
+    public int getAmountRadioStation() {
+        return amountRadioStation;
+    }
+
     public void setRadioStationNumber(int newRadioStationNumber) {
-        if (newRadioStationNumber < 0) {
+        if (newRadioStationNumber < firstRadioStation) {
             return;
         }
 
-        if (newRadioStationNumber > 9) {
+        if (newRadioStationNumber > lastRadioStation) {
             return;
         }
         radioStationNumber = newRadioStationNumber;
     }
 
     public void next() {
-        if (radioStationNumber < 9) {
+        if (radioStationNumber < lastRadioStation) {
             radioStationNumber = radioStationNumber + 1;
         }
 
-        if (radioStationNumber == 9) {
-            radioStationNumber = 0;
+        if (radioStationNumber == lastRadioStation) {
+            radioStationNumber = firstRadioStation;
         }
     }
 
     public void prev() {
-        if (radioStationNumber < 10) {
+        if (radioStationNumber > firstRadioStation) {
             radioStationNumber = radioStationNumber - 1;
-        }
-
-        if (radioStationNumber < 0) {
-            radioStationNumber = 9;
+        } else {
+            radioStationNumber = lastRadioStation;
         }
     }
 
+    public  int getMinVolume() {
+        return minVolume;
+    }
+
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
     public void setSoundVolume(int newSoundVolume) {
-        if (newSoundVolume < 0) {
+        if (newSoundVolume < minVolume) {
             return;
         }
 
-        if (newSoundVolume > 10) {
+        if (newSoundVolume > maxVolume) {
             return;
         }
 
@@ -50,22 +73,22 @@ public class Radio {
 
     public void increaseVolume() {
 
-        if (soundVolume < 10) {
+        if (soundVolume < maxVolume) {
             soundVolume = soundVolume + 1;
         }
 
-        if (soundVolume >= 10) {
-            soundVolume = 10;
+        if (soundVolume >= maxVolume) {
+            soundVolume = maxVolume;
         }
     }
 
 
     public void reduceVolume() {
 
-        if (soundVolume > 0) {
+        if (soundVolume > minVolume) {
             soundVolume = soundVolume - 1;
         } else {
-            soundVolume = 0;
+            soundVolume = minVolume;
         }
     }
 
