@@ -12,10 +12,10 @@ public class Radio {
 
     public Radio(int amountRadioStation) {
         this.amountRadioStation = amountRadioStation;
+        this.lastRadioStation = this.amountRadioStation - 1;
     }
 
     public Radio() {
-        this.amountRadioStation = 10;
     }
 
     public int getAmountRadioStation() {
@@ -51,7 +51,7 @@ public class Radio {
         }
     }
 
-    public  int getMinVolume() {
+    public int getMinVolume() {
         return minVolume;
     }
 
@@ -81,7 +81,6 @@ public class Radio {
             soundVolume = maxVolume;
         }
     }
-
 
     public void reduceVolume() {
 

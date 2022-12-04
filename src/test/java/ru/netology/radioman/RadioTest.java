@@ -19,6 +19,16 @@ class RadioTest {
 
         Assertions.assertEquals(26, wave.getAmountRadioStation());
     }
+
+    @Test
+    public void callRadioStationNumber15() {
+        Radio wave = new Radio (20);
+
+        wave.setRadioStationNumber(15);
+
+        Assertions.assertEquals(15, wave.radioStationNumber);
+    }
+
     @Test
     public void shouldSetRadioStationNumber() {
         Radio wave = new Radio();
