@@ -12,7 +12,7 @@ class RadioTest {
         wave.setRadioStationNumber(7);
 
         int expected = 7;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -24,7 +24,7 @@ class RadioTest {
         wave.setRadioStationNumber(-12);
 
         int expected = 0;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -36,7 +36,7 @@ class RadioTest {
         wave.setRadioStationNumber(15);
 
         int expected = 0;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -49,7 +49,7 @@ class RadioTest {
         wave.next();
 
         int expected = 8;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -62,7 +62,7 @@ class RadioTest {
         wave.next();
 
         int expected = 0;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -75,7 +75,7 @@ class RadioTest {
         wave.prev();
 
         int expected = 0;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -88,7 +88,7 @@ class RadioTest {
         wave.prev();
 
         int expected = 8;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -101,7 +101,7 @@ class RadioTest {
         wave.prev();
 
         int expected = 9;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -114,7 +114,7 @@ class RadioTest {
         wave.prev();
 
         int expected = 9;
-        int actual = wave.radioStationNumber;
+        int actual = wave.getRadioStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -126,7 +126,7 @@ class RadioTest {
         volume.setSoundVolume(0);
 
         int expected = 0;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -138,7 +138,7 @@ class RadioTest {
         volume.setSoundVolume(-1);
 
         int expected = 0;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -150,7 +150,7 @@ class RadioTest {
         volume.setSoundVolume(23);
 
         int expected = 0;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -163,7 +163,7 @@ class RadioTest {
         volume.increaseVolume();
 
         int expected = 1;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -176,7 +176,7 @@ class RadioTest {
         volume.increaseVolume();
 
         int expected = 10;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -189,7 +189,7 @@ class RadioTest {
         volume.reduceVolume();
 
         int expected = 1;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -202,7 +202,7 @@ class RadioTest {
         volume.reduceVolume();
 
         int expected = 0;
-        int actual = volume.soundVolume;
+        int actual = volume.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }

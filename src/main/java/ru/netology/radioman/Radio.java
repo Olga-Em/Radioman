@@ -1,13 +1,12 @@
 package ru.netology.radioman;
 
 public class Radio {
-//    private int amountRadioStation = 10;
-//    private int minVolume = 0;
-//    private int maxVolume = 10;
+    private int radioStationNumber;
+    private int soundVolume;
 
-
-    public int radioStationNumber;
-    public int soundVolume;
+    public int getRadioStationNumber() {
+        return radioStationNumber;
+    }
 
     public void setRadioStationNumber(int newRadioStationNumber) {
         if (newRadioStationNumber < 0) {
@@ -36,6 +35,10 @@ public class Radio {
         } else {
             radioStationNumber = 9;
         }
+    }
+
+    public int getSoundVolume() {
+        return soundVolume;
     }
 
     public void setSoundVolume(int newSoundVolume) {
